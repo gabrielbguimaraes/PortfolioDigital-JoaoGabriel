@@ -1,4 +1,4 @@
-# Portfólio Digital de João Gabriel Barros Guimarães
+# Portfólio Digital de João Gabriel Barros Guimarães no curso de DSM
 
 ## Orientador: Fabrício Galende Marques de Carvalho
 
