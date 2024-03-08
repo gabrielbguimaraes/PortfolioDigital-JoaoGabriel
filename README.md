@@ -3,7 +3,7 @@
 ## Orientador: Fabrício Galende Marques de Carvalho
 
 <div align="center">
-    <img src="https://github.com/gabrielbguimaraes/portfolio_dsm-/blob/main/foto_gabriel.jpeg" width="300" height="300">
+    <img src="https://github.com/gabrielbguimaraes/portfolio_dsm-/blob/main/mgt/foto_gabriel.jpeg" width="300" height="300">
 </div>
 
 
