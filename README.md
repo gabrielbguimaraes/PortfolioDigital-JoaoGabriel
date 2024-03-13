@@ -1,8 +1,6 @@
 # Portfólio Digital de João Gabriel Barros Guimarães no curso de DSM
 
-Teste de conflito
-
-tetse de conflito 2
+BLABLABLA OFICIAL
 
 ## Orientador: Fabrício Galende Marques de Carvalho
 
