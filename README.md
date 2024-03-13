@@ -1,6 +1,6 @@
 # Portfólio Digital de João Gabriel Barros Guimarães no curso de DSM
 
-Teste de conflito 0.5
+BLABLABLA
 
 
 ## Orientador: Fabrício Galende Marques de Carvalho
