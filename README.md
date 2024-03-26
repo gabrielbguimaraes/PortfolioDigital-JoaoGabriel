@@ -17,3 +17,5 @@ Git;
 GitHub;
 Markdown;
 VisualStudio Code;
+
+Validação do orientador. Fabrício Galende Marques de Carvalho 2024/01
