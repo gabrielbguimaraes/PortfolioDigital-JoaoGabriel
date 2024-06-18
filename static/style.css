@@ -1,19 +1,19 @@
 body {
-    font-family: 'Roboto Slab';
+    font-family: "montserrat";
     margin: 0;
     padding: 0;
-    background-color: #222;
+    background-image: url("/mgt/fundo-preto.png");
     color: #fff;
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url('/mgt/sun.jpg'); 
+    background-color: #333;
     background-attachment: fixed; 
     background-size: cover;
     font-size: small;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px; 
     margin: 0 auto; 
@@ -21,16 +21,15 @@ body {
     text-align: justify; 
 }
 
-
 @font-face {
-    font-family: "lightstories";
-    src: url("/mgt/fonts/light\ stories\ font.ttf") format("truetype");
+    font-family: "montserrat";
+    src: url("/mgt/fonts/montserrat\ regular.ttf") format("truetype");
 }
 
 .navbar {
-    display: flex; /* Adiciona o alinhamento flexível */
-    justify-content: space-between; /* Distribui os itens uniformemente ao longo do eixo principal (horizontalmente) */
-    align-items: center; /* Centraliza verticalmente os itens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: linear-gradient(90deg, rgba(153, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 50%, rgba(153, 0, 0, 1) 100%);
     padding: 20px;
     border-radius: 10px;
@@ -38,7 +37,7 @@ body {
     max-width: 800px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     color: white;
-    font-family: 'Roboto Slab', serif;
+    font-family: "montserrat";
 }
 
 .navbar img {
@@ -46,7 +45,19 @@ body {
     height: auto;
 }
 
-.navbar a {
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-links a {
     text-decoration: none;
     color: #fff;
     margin: 0 10px;
@@ -55,18 +66,34 @@ body {
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease;
 }
+
+.navbar.active .nav-links {
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar.active .nav-links a {
+    margin: 10px 0;
+}
+
+.navbar.active img {
+    margin: 0 auto;
+}
+
 .navbar a:hover {
     border-color: #fff;
 }
+
 .divider {
-    border: 1px solid white; /* Linha branca */
-    margin: 20px auto; /* Margem superior e inferior e alinhamento central */
-    width: 90%; /* Largura da linha */
+    border: 1px solid white;
+    margin: 20px auto;
+    width: 90%;
 }
+
 .fotinho {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     overflow: hidden;
     border: 3px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -117,36 +144,32 @@ footer {
     }
 }
 
-
 @media screen and (max-width: 767px) {
-    .section {
-        padding: 20px; /* Reduza o padding para telas menores */
-    }
-
     .navbar {
-        flex-direction: column; /* Altera a direção do flexbox para coluna */
-        align-items: center; /* Centraliza os itens na coluna */
-        padding-bottom: 20px; /* Adiciona espaço na parte inferior da navbar */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .navbar a {
-        margin: 5px 0; /* Reduza a margem entre os links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .navbar img {
-        margin-bottom: 10px; /* Adiciona espaço abaixo do logo */
+    .nav-links a {
+        margin: 5px 0;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
     }
-}
 
-.social-links a {
-    color: #fff;
-    font-size: 24px;
-    margin-right: 10px;
-    text-decoration: none;
-}
+    .menu-icon {
+        display: block;
+    }
 
-.social-links a:hover {
-    color: #ccc;
+    .navbar.active .nav-links {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -166,6 +189,7 @@ footer {
         padding: 20px;
     }
 }
+
 .buttons {
     margin-top: 20px;
 }
@@ -181,22 +205,23 @@ footer {
     margin: 0 10px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
-    background-color: rgba(200, 0, 0, 0.8); /* Escurece um pouco a cor ao passar o mouse */
+    background-color: rgba(200, 0, 0, 0.8);
 }
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    width: 90%; /* Reduz a largura do footer */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    border-top: 1px solid rgba(153, 0, 0, 1); /* Bordas superiores */
-    border-radius: 10px; /* Borda arredondada */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(153, 0, 0, 1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .social-links {

@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim </title>
+    <title>Sobre Mim</title>
     <link rel="stylesheet" href="/static/style.css">
+    <script defer src="/static/script.js"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="navbar">
         <img src="/mgt/praise_the_sun.png" alt="Logo">
-        <a href="index.html">INÍCIO</a>
-        <a href="sobre.html">SOBRE</a>
-        <a href="contato.html">CONTATO</a>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">INÍCIO</a>
+            <a href="sobre.html">SOBRE</a>
+            <a href="contato.html">CONTATO</a>
+        </div>
     </div>
 
     <div id="sobre" class="section">
@@ -37,10 +41,21 @@
     <div id="deep" class="section">
         <h1>DEEPESG</h1>
         <h3>Automatização de backups via python</h3>
-        <p>Realizei a automatização de backups de empresa criando um script que acessava a API da Oracle Cloud infraestruture e enviava toda semana um email informando se a verificação foi realizada e quais empresas foram verificadas.</p>
+        <p>Realizei a automatização de backups de empresa criando um script que acessava a API da Oracle Cloud infrastructure e enviava toda semana um email informando se a verificação foi realizada e quais empresas foram verificadas.</p>
 
         <div class="fotinho">
             <img src="/mgt/backups.PNG" alt="projeto_smart">
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div id="docker" class="section">
+        <h1>FATEC</h1>
+        <h3>Projeto dev web - FATEC</h3>
+        <p>Criei um site de tema livre com o tema de uma página para os fãs de One Piece e criei um banco de dados para o cadastro e containerizei a aplicação criando as imagens e utilizando o docker-compose.</p>
+        <div class="fotinho">
+            <img src="/mgt/one_piece.PNG" alt="projeto_dev">
         </div>
     </div>
 
@@ -48,20 +63,16 @@
         <p>© 2024 Gabriel Guimarães. Todos os direitos reservados.</p>
     </footer>
 
-    <hr class="divider">
-
-    <div id="docker" class="section">
-        <h1>FATEC</h1>
-        <h3>Projeto dev web - FATEC</h3>
-        <p>Criei um site de tema livre, com o tema de uma página para os fãs de One Piece e criei um banco de dados para o cadastro e containerizei a aplicação criando as imagens e utilizando o docker-compose.</p>
-        <div class="fotinho">
-            <img src="/mgt/one_piece.PNG" alt="projeto_dev">
-        </div>
-    </div>
 
 
 </div>
 
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>

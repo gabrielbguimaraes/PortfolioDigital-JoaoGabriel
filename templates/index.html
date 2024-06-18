@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="/static/style.css">
+    <script defer src="/static/script.js"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="navbar">
-		<img src="/mgt/bonfire.png" alt="Logo">
-		<a href="index.html">INÍCIO</a>
-		<a href="sobre.html">SOBRE</a>
-		<a href="contato.html">CONTATO</a>
-	</div>
+        <img src="/mgt/praise_the_sun.png" alt="Logo">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">INÍCIO</a>
+            <a href="sobre.html">SOBRE</a>
+            <a href="contato.html">CONTATO</a>
+        </div>
+    </div>
 
     <div id="home" class="section">
         <div class="fotinho">
@@ -24,8 +28,7 @@
         <h2>Gabriel Guimarães</h2>
         <h3>Estagiário de infraestrutura e estudante de desenvolvimento apaixonado por tecnologia, games e geografia.</h3>
         <p>Olá👋, meu nome é Gabriel, sou nascido e criado em Manaus-AM e estou morando em São José dos Campos. Estou estagiando na área de infraestrutura na DEEPESG, estudando o curso de Desenvolvimento de Software Multiplataforma na Faculdade de Tecnologia de São Paulo e tenho como objetivo de prosseguir com a carreira de DevOps, adoro fazer automações utilizando a linguagem python e estudar redes.</p>
-		<p>Saiba mais sobre mim nos botões abaixo!</p>
-        <!-- Botões para diferentes páginas do projeto -->
+        <p>Saiba mais sobre mim nos botões abaixo!</p>
         <div class="buttons">
             <a href="index.html" class="button">Home</a>
             <a href="sobre.html" class="button">Sobre mim</a>
