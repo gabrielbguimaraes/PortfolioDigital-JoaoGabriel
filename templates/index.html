@@ -1,47 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>João Gabriel - Portfólio Cyber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../static/style.css">
-    <script defer src="/static/script.js"></script>
 </head>
 <body>
 
-<div class="container">
-    <div class="navbar">
-        <a href="index.html">
-            <img src="../mgt/praise_the_sun.png" alt="Logo">
-        </a>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">INÍCIO</a>
-            <a href="sobre.html">SOBRE</a>
-            <a href="contato.html">CONTATO</a>
+    <div class="background-animation"></div>
+
+    <div class="main-content-wrapper">
+        <div class="navbar-container">
+            <nav class="navbar">
+                <div class="navbar-logo-area"> Todos os direitos reservados.
+                    <a href="#home" class="nav-link-internal" data-section="home">
+                        <img src="../mgt/Logo.png" alt="Logo do Portfólio" class="logo-img">
+                    </a>
+                    <div class="logo-animation-text" id="logoAnimationText"></div>
+                </div>
+
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link-internal" data-section="home">INÍCIO</a>
+                    <a href="#technologies" class="nav-link-internal" data-section="technologies">TECNOLOGIAS</a>
+                    <a href="#projects" class="nav-link-internal" data-section="projects">PROJETOS</a>
+                    <a href="#contact" class="nav-link-internal" data-section="contact">CONTATO</a>
+                </div>
+            </nav>
+        </div>
+
+        <div id="initial-terminal-screen">
+            <h1 id="typed-text"></h1>
+            <p id="blinking-cursor">_</p>
+        </div>
+
+        <div id="portfolio-sections">
+            <section class="page-section hero-home-section" id="home">
+                <div class="section-content hero-content-layout">
+                    <div class="hero-text-column">
+                        <span class="greeting">Olá! 👋</span>
+                        <h1>Sou Gabriel Guimarães</h1>
+                        <h2>Estagiário de Infraestrutura <br>& Desenvolvedor em Formação</h2>
+                        <p>Apaixonado por tecnologia, games e geografia. Busco constantemente aprender e criar soluções eficientes no universo DevOps e redes.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="button nav-link-internal" data-section="contact">Fale Comigo</a>
+                        </div>
+                        <div class="hero-social-links">
+                            <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image-column">
+                        <img src="../mgt/Logo.png" alt="Sua foto" class="hero-photo-main">
+                    </div>
+                </div>
+
+                <div class="about-me-content">
+                    <div class="section-content about-content-layout">
+                        <h1>Sobre Mim</h1>
+                        <p>Nascido em Manaus-AM e agora em São José dos Campos, tenho 22 anos. Sou estagiário de infraestrutura na DEEPESG e estudante de Desenvolvimento de Software Multiplataforma na Faculdade de Tecnologia de São Paulo e tenho como objetivo de trilhar a carreira de DevOps e redes, combinando minha paixão por tecnologia, games e geografia para construir soluções inovadoras e eficientes.</p>
+                        <p>Aqui você encontrará mais detalhes sobre minha trajetória, habilidades e paixões. Desde os primeiros passos na programação até os projetos mais recentes, cada experiência moldou meu perfil profissional.</p>
+                        <p>Minha experiência na Faculdade de Tecnologia de São Paulo inclui projetos como o **Smart Farming**, onde desenvolvi um website para leitura e armazenamento de dados de estufas inteligentes, gerando gráficos e médias diárias para uma melhor administração. Na **DEEPESG**, realizei a automatização de backups empresariais com um script Python que interage com a API da Oracle Cloud Infrastructure, enviando relatórios semanais por e-mail.</p>
+                        <p>Também atuei na criação de um site temático sobre One Piece com banco de dados, conteinerizando a aplicação com Docker e Docker Compose. No segundo semestre da FATEC, participei do projeto **Inv.Sort**, uma solução de gerenciamento de inventários com Node.js, React e AWS, desenvolvida com metodologia ágil Scrum para otimização do processo.</p>
+                        <p>Minha busca por conhecimento é constante, e estou sempre explorando novas ferramentas e conceitos para aprimorar minhas habilidades em desenvolvimento e infraestrutura.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="technologies">
+                <div class="section-content tech-content-layout">
+                    <h1>Minhas Tecnologias</h1>
+                    <p class="tech-intro">Ferramentas e linguagens que domino e utilizo nos meus projetos.</p>
+                    <div class="tech-carousel-container">
+                        <div class="tech-carousel-inner">
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-python tech-icon"></i><span class="tech-name">Python</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-docker tech-icon"></i><span class="tech-name">Docker</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-js-square tech-icon"></i><span class="tech-name">JavaScript</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">TS</span><span class="tech-name">TypeScript</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">C#</span><span class="tech-name">C#</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-react tech-icon"></i><span class="tech-name">React</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-node-js tech-icon"></i><span class="tech-name">Node.JS</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">FL</span><span class="tech-name">Flask</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">ZB</span><span class="tech-name">Zabbix</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-linux tech-icon"></i><span class="tech-name">Linux</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">AS</span><span class="tech-name">AppsScript</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">GW</span><span class="tech-name">Google Workspace</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-google tech-icon"></i><span class="tech-name">Google Cloud</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-aws tech-icon"></i><span class="tech-name">AWS</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">TCP</span><span class="tech-name">TCP/IP (Redes)</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">DC</span><span class="tech-name">Docker Compose</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-github-alt tech-icon"></i><span class="tech-name">GitHub Actions</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item"><i class="fab fa-git-alt tech-icon"></i><span class="tech-name">Git</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">SQL</span><span class="tech-name">MySQL</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">MG</span><span class="tech-name">MongoDB</span></div></div>
+                            <div class="tech-carousel-item"><div class="tech-item tech-custom-icon"><span class="tech-icon">CP</span><span class="tech-name">Cisco Packet Tracer</span></div></div>
+                        </div>
+                        <button class="carousel-control prev">&lt;</button>
+                        <button class="carousel-control next">&gt;</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="projects">
+                <div class="section-content">
+                    <h1>Meus Projetos</h1>
+                    <p>Explore alguns dos trabalhos que desenvolvi e participei. Cada projeto reflete minha paixão por solucionar desafios e aprender novas tecnologias. Clique para saber mais!</p>
+
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <img src="../mgt/smart.PNG" alt="Smart Farming" class="card-image">
+                            <h3>Smart Farming</h3>
+                            <p>Desenvolvimento de um website para leitura e armazenamento de dados de estufa inteligente.</p>
+                            <a href="https://github.com/gabrielbguimaraes/Smart-Farming-API-1%C2%BA-Semestre" target="_blank" class="button small-button">Ver Código</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../mgt/backups.PNG" alt="Automatização de Backups" class="card-image">
+                            <h3>Automatização de Backups</h3>
+                            <p>Script Python para automatizar backups via API da Oracle Cloud, com notificações por e-mail.</p>
+                            <a href="https://github.com/gabrielbguimaraes/Automacao-Deep" target="_blank" class="button small-button">Ver Código</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../mgt/one_piece.PNG" alt="Projeto Dev Web (One Piece)" class="card-image">
+                            <h3>Projeto Dev Web (One Piece)</h3>
+                            <p>Site temático de One Piece com banco de dados e aplicação conteinerizada com Docker.</p>
+                            <a href="https://github.com/gabrielbguimaraes/docker-web-app" target="_blank" class="button small-button">Ver Código</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../mgt/projeto-2.jpeg" alt="Inv. Sort" class="card-image">
+                            <h3>Inv. Sort</h3>
+                            <p>Solução moderna para gerenciamento de inventários com Node.js, React e AWS.</p>
+                            <a href="https://github.com/gabrielbguimaraes/Inv.Sort-API-2%C2%BA-Semestre" target="_blank" class="button small-button">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="contact">
+                <div class="section-content">
+                    <h1>Contato</h1>
+                    <p>Estou sempre aberto a novas conexões e oportunidades. Sinta-se à vontade para entrar em contato através das minhas redes sociais ou email.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="mailto:biel_google@hotmail.com" class="email-link"><i class="fas fa-envelope"></i> biel_google@hotmail.com</a>
+                    </div>
+                    <div class="contact-footer-info">
+                        <p>© 2025 Gabriel Guimarães. Todos os direitos reservados.</p>
+                        <div class="social-links" style="font-size: 2em; margin-top: 15px;">
+                            <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/5512996695155" target="_blank">  <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
-    <div id="home" class="section">
-        <div class="fotinho">
-            <img src="../mgt/eu.jpeg" alt="eu">
-        </div>
-        
-        <h2>Gabriel Guimarães</h2>
-        <h3>Estagiário de infraestrutura e estudante de desenvolvimento apaixonado por tecnologia, games e geografia.</h3>
-        <p>Olá👋, meu nome é Gabriel, tenho 22 anos, sou nascido e criado em Manaus-AM e estou morando em São José dos Campos. Estou estagiando na área de infraestrutura na DEEPESG, estudando o curso de Desenvolvimento de Software Multiplataforma na Faculdade de Tecnologia de São Paulo e tenho como objetivo de prosseguir com a carreira de DevOps e redes.</p>
-        <p>Saiba mais sobre mim nos botões abaixo!</p>
-        <div class="buttons">
-            <a href="index.html" class="button">Home</a>
-            <a href="sobre.html" class="button">Sobre mim</a>
-            <a href="contato.html" class="button">Contato</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 Gabriel Guimarães. Todos os direitos reservados.</p>
-    </footer>
-</div>
-
+    <script src="../static/script.js"></script>
 </body>
 </html>
