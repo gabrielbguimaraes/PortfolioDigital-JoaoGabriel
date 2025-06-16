@@ -26,36 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectDetails = {
         "smart-farming": {
             title: "Smart Farming",
-            year: "2019-2",
-            partner: "ACME",
-            description: "Trabalhei no projeto da API com o Parceiro Acadêmico ACME. Percebemos, cada vez mais, que o consenso sobre a utilização da orientação a objeto pode nos levar a considerar a reestruturação das novas tendencias em TI. Do mesmo modo, o novo modelo computacional aqui preconizado garante a integridade dos dados envolvidos das janelas de tempo disponíveis. A implantação, na prática, prova que a adoção de políticas de segurança da informação assume importantes níveis de uptime dos equipamentos pré-especificados. Não obstante, a constante divulgação das informações cumpre um papel essencial na implantação da terceirização dos serviços. Ainda assim, existem dúvidas a respeito de como a consolidação das infraestruturas inviabiliza a implantação do levantamento das variáveis envolvidas.",
-            technologies: "Analytics, Intelligent Things, Plataforma de Interação",
-            contributions: "O que temos que ter sempre em mente é que a alta necessidade de integridade otimiza o uso dos processadores dos requisitos mínimos de hardware exigidos. Pensando mais a longo prazo, o desenvolvimento contínuo de distintas formas de codificação conduz a um melhor balancemanto de carga da garantia da disponibilidade. A implantação, na prática, prova que a consolidação das infraestruturas apresenta tendências no sentido de aprovar a nova topologia das ferramentas OpenSource.",
-            hardSkills: "Python, CSS, Html",
-            softSkills: "Autonomia, Proatividade",
-            repoLink: "[https://github.com/gabrielbguimaraes/Smart-Farming-API-1%C2%BA-Semestre](https://github.com/gabrielbguimaraes/Smart-Farming-API-1%C2%BA-Semestre)"
+            year: "2024-1",
+            partner: "i9 FATEC",
+            description: "Em 2024-1 desenvolvemos este projeto que se trata de um website para a leitura e armazenamento de dados da estufa inteligente do Project Smart Farming, que analisa os dados sobre umidade ambiente, umidade do solo, temperatura ambiente e volume da água, usando-os como base para a geração de gráficos e médias diárias, possibilitando uma melhor administração e monitoria da estufa.",
+            technologies: "HTML5, CSS3, JavaScript, VS Code, GitHub, Flask, MySQL, Figma, Jira",
+            contributions: "Desenvolvedor: Atuei na criação da iteração do calendário anual para integração com o efeito carrossel da aplicação, assim como o detalhamento dos dados ao clicar no dia. Também atuei no desenvolvimento do sistema de filtro por dias na seção de analytics da aplicação.",
+            hardSkills: "HTML5, CSS3, JavaScript, VS Code, GitHub, Flask, MySQL, Figma, Jira",
+            softSkills: "Durante o desenvolvimento, tivemos como obstáculo a adaptação do processo de desenvolvimento ágil no desenvolvimento de software e principalmente na arquitetura necessária, como DoR e DoD das tarefas que não estavam bem definidas, e para contornar desenvolvemos a proatividade do grupo em visualizar a nossa dificuldade em reuniões e reestruturar nosso projeto com a ajuda e orientação dos professores.",
+            repoLink: "[https://github.com/BugBustersFatecSJC/Smart-farm](https://github.com/BugBustersFatecSJC/Smart-farm)"
         },
         "automatizacao-backups": {
             title: "Automatização de Backups",
-            year: "2023",
+            year: "2024-1",
             partner: "DEEPESG",
             description: "Realizei a automatização de backups de empresa criando um script que acessava a API da Oracle Cloud infrastructure e enviava toda semana um email informando se a verificação foi realizada e quais empresas foram verificadas.",
             technologies: "Python, Oracle Cloud Infrastructure (OCI) API, E-mail Automation",
             contributions: "Desenvolvimento e implementação do script Python, configuração de agendamento, testes e monitoramento.",
             hardSkills: "Python, APIs REST, Automação",
-            softSkills: "Resolução de Problemas, Atenção a Detalhes",
-            repoLink: "[https://github.com/gabrielbguimaraes/Automacao-Deep](https://github.com/gabrielbguimaraes/Automacao-Deep)"
+            softSkills: "Resolução de Problemas, Atenção a Detalhes"
         },
         "one-piece-dev": {
             title: "Projeto Dev Web (One Piece)",
-            year: "2024",
+            year: "2024-1",
             partner: "FATEC",
             description: "Criei um site de tema livre com o tema de uma página para os fãs de One Piece e criei um banco de dados para o cadastro de usuários e a conteinerização da aplicação utilizando Docker e Docker Compose, garantindo um ambiente de desenvolvimento e deploy robusto e portátil.",
             technologies: "HTML, CSS, JavaScript, Docker, Docker Compose, MySQL",
             contributions: "Design e desenvolvimento front-end e back-end, modelagem do banco de dados, conteinerização da aplicação.",
             hardSkills: "Web Development, Docker, Bancos de Dados",
             softSkills: "Criatividade, Gerenciamento de Projeto Básico",
-            repoLink: "[https://github.com/gabrielbguimaraes/docker-web-app](https://github.com/gabrielbguimaraes/docker-web-app)"
+            repoLink: "[https://github.com/gabrielbguimaraes/dev_web_JGBG](https://github.com/gabrielbguimaraes/dev_web_JGBG)"
         },
         "inv-sort": {
             title: "Inv. Sort",
@@ -66,7 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
             contributions: "Desenvolvimento de módulos de back-end (Node.js), integração com APIs AWS, participação em reuniões Scrum e planejamento de sprints.",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
             softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
-            repoLink: "[https://github.com/gabrielbguimaraes/Inv.Sort-API-2%C2%BA-Semestre](https://github.com/gabrielbguimaraes/Inv.Sort-API-2%C2%BA-Semestre)"
+            repoLink: "[https://github.com/BugBustersFatecSJC/inv.sort](https://github.com/BugBustersFatecSJC/inv.sort)"
+        },
+        "checkpoint": {
+            title: "checkpoint",
+            year: "2025-1",
+            partner: "FATEC",
+            description: "Participei de um projeto chamado checkpoint, uma aplicação web desenvolvida para otimizar o gerenciamento de jornada de trabalho, proporcionando uma solução moderna e eficiente para o controle de ponto eletrônico. A plataforma permite registros precisos de entrada e saída, cálculo automático de horas, gestão de ausências e um painel intuitivo para análise de dados e geração de relatórios.",
+            technologies: "Java, Spring Boot, React, TypeScript, MySQL, MongoDB, AWS, Tailwind, CSS, STOMP, SockJS, Axios, React",
+            contributions: "Scrum Master: Atuei na qualidade do processo de desenvolvimento, assegurando que não hajam obstáculos para a equipe de desenvolvimento e para o Product Owner",
+            hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
+            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
+            repoLink: "[https://github.com/FR0M-ZER0/checkpoint](https://github.com/FR0M-ZER0/checkpoint)"
         }
     };
 
