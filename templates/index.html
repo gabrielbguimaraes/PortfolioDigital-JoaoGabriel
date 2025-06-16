@@ -13,11 +13,10 @@
 <body>
 
     <div class="background-animation"></div>
-
     <div class="main-content-wrapper">
         <div class="navbar-container">
             <nav class="navbar">
-                <div class="navbar-logo-area"> Todos os direitos reservados.
+                <div class="navbar-logo-area">
                     <a href="#home" class="nav-link-internal" data-section="home">
                         <img src="../mgt/Logo.png" alt="Logo do Portfólio" class="logo-img">
                     </a>
@@ -43,7 +42,7 @@
             <section class="page-section hero-home-section" id="home">
                 <div class="section-content hero-content-layout">
                     <div class="hero-text-column">
-                        <span class="greeting">Olá! 👋</span>
+                        <!---<span class="greeting">Olá! 👋</span0-->
                         <h1>Sou Gabriel Guimarães</h1>
                         <h2>Estagiário de Infraestrutura <br>& Desenvolvedor em Formação</h2>
                         <p>Apaixonado por tecnologia, games e geografia. Busco constantemente aprender e criar soluções eficientes no universo DevOps e redes.</p>
@@ -54,6 +53,7 @@
                             <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/5512996695155" target="_blank">  <i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="hero-image-column">
@@ -117,25 +117,26 @@
                             <img src="../mgt/smart.PNG" alt="Smart Farming" class="card-image">
                             <h3>Smart Farming</h3>
                             <p>Desenvolvimento de um website para leitura e armazenamento de dados de estufa inteligente.</p>
-                            <a href="https://github.com/gabrielbguimaraes/Smart-Farming-API-1%C2%BA-Semestre" target="_blank" class="button small-button">Ver Código</a>
+                            {/* Botão para abrir o modal, com data-project para JS identificar */}
+                            <button class="button small-button view-project-button" data-project="smart-farming">Ver Detalhes</button>
                         </div>
                         <div class="project-card">
                             <img src="../mgt/backups.PNG" alt="Automatização de Backups" class="card-image">
                             <h3>Automatização de Backups</h3>
                             <p>Script Python para automatizar backups via API da Oracle Cloud, com notificações por e-mail.</p>
-                            <a href="https://github.com/gabrielbguimaraes/Automacao-Deep" target="_blank" class="button small-button">Ver Código</a>
+                            <button class="button small-button view-project-button" data-project="automatizacao-backups">Ver Detalhes</button>
                         </div>
                         <div class="project-card">
                             <img src="../mgt/one_piece.PNG" alt="Projeto Dev Web (One Piece)" class="card-image">
                             <h3>Projeto Dev Web (One Piece)</h3>
                             <p>Site temático de One Piece com banco de dados e aplicação conteinerizada com Docker.</p>
-                            <a href="https://github.com/gabrielbguimaraes/docker-web-app" target="_blank" class="button small-button">Ver Código</a>
+                            <button class="button small-button view-project-button" data-project="one-piece-dev">Ver Detalhes</button>
                         </div>
                         <div class="project-card">
                             <img src="../mgt/projeto-2.jpeg" alt="Inv. Sort" class="card-image">
                             <h3>Inv. Sort</h3>
                             <p>Solução moderna para gerenciamento de inventários com Node.js, React e AWS.</p>
-                            <a href="https://github.com/gabrielbguimaraes/Inv.Sort-API-2%C2%BA-Semestre" target="_blank" class="button small-button">Ver Código</a>
+                            <button class="button small-button view-project-button" data-project="inv-sort">Ver Detalhes</button>
                         </div>
                     </div>
                 </div>
@@ -150,9 +151,10 @@
                         <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
                         <a href="mailto:biel_google@hotmail.com" class="email-link"><i class="fas fa-envelope"></i> biel_google@hotmail.com</a>
+                        <a href="https://wa.me/5512996695155" target="_blank">  <i class="fab fa-whatsapp"></i></a>
                     </div>
                     <div class="contact-footer-info">
-                        <p>© 2025 Gabriel Guimarães. Todos os direitos reservados.</p>
+                        <p>© 2025 Gabriel Guimarães.</p>
                         <div class="social-links" style="font-size: 2em; margin-top: 15px;">
                             <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i></a>
@@ -162,6 +164,43 @@
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalProjectDetails">
+                {/* Conteúdo do projeto será injetado aqui */}
+                <h2 class="modal-title"></h2>
+                <div class="modal-details-grid">
+                    <div class="modal-detail-item">
+                        <strong>Ano:</strong> <span class="modal-year"></span>
+                    </div>
+                    <div class="modal-detail-item">
+                        <strong>Parceiro Acadêmico:</strong> <span class="modal-partner"></span>
+                    </div>
+                    <div class="modal-detail-item modal-description-full">
+                        <strong>Descrição:</strong> <p class="modal-description"></p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <strong>Tecnologias Utilizadas:</strong> <span class="modal-tech-list"></span>
+                    </div>
+                    <div class="modal-detail-item">
+                        <strong>Contribuições Pessoais:</strong> <p class="modal-contributions"></p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <strong>Hard Skills Desenvolvidas:</strong> <span class="modal-hard-skills"></span>
+                    </div>
+                    <div class="modal-detail-item">
+                        <strong>Soft Skills Desenvolvidas:</strong> <span class="modal-soft-skills"></span>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <a href="#" target="_blank" class="button modal-repo-button">Acessar Repositório</a>
+                    <button class="button modal-close-button">Fechar</button>
+                </div>
+            </div>
         </div>
     </div>
 

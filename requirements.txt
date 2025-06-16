@@ -1,8 +1,19 @@
-Flask==3.0.2
-Jinja2==3.1.3
-Werkzeug==3.0.0
-itsdangerous==2.1.2
-click==8.1.7
-blinker==1.7.0
-colorama==0.4.6
-MarkupSafe==2.1.5
+                <div class="section-content">
+                    <h1>Contato</h1>
+                    <p>Estou sempre aberto a novas conexões e oportunidades. Sinta-se à vontade para entrar em contato através das minhas redes sociais ou email.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="mailto:biel_google@hotmail.com" class="email-link"><i class="fas fa-envelope"></i> biel_google@hotmail.com</a>
+                    </div>
+                    <div class="contact-footer-info">
+                        <p>© 2025 Gabriel Guimarães. Todos os direitos reservados.</p>
+                        <div class="social-links" style="font-size: 2em; margin-top: 15px;">
+                            <a href="https://www.linkedin.com/in/gabriel-g-854017138/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/gabrielbguimaraes" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/notbiel__/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/5512996695155" target="_blank">  <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>

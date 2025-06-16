@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedTextElement = document.getElementById('typed-text');
     const blinkingCursor = document.getElementById('blinking-cursor');
     const portfolioSectionsContainer = document.getElementById('portfolio-sections');
-    const logoAnimationTextElement = document.getElementById('logoAnimationText'); // Elemento para animação da logo
-    const logoImgElement = document.querySelector('.navbar .logo-img'); // A imagem da logo
+    const logoAnimationTextElement = document.getElementById('logoAnimationText');
+    const logoImgElement = document.querySelector('.navbar .logo-img');
 
     const textToType = "Olá, Gabriel Guimarães aqui.";
     let charIndex = 0;
@@ -21,6 +21,71 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoTypingSpeed = 80;
     let logoAnimationTimeout;
     let isLogoHovered = false; // Estado do hover da logo
+
+    // --- Dados dos Projetos para o Modal (EXEMPLOS - PREENCHA COM SEUS DADOS REAIS) ---
+    const projectDetails = {
+        "smart-farming": {
+            title: "Smart Farming",
+            year: "2019-2",
+            partner: "ACME",
+            description: "Trabalhei no projeto da API com o Parceiro Acadêmico ACME. Percebemos, cada vez mais, que o consenso sobre a utilização da orientação a objeto pode nos levar a considerar a reestruturação das novas tendencias em TI. Do mesmo modo, o novo modelo computacional aqui preconizado garante a integridade dos dados envolvidos das janelas de tempo disponíveis. A implantação, na prática, prova que a adoção de políticas de segurança da informação assume importantes níveis de uptime dos equipamentos pré-especificados. Não obstante, a constante divulgação das informações cumpre um papel essencial na implantação da terceirização dos serviços. Ainda assim, existem dúvidas a respeito de como a consolidação das infraestruturas inviabiliza a implantação do levantamento das variáveis envolvidas.",
+            technologies: "Analytics, Intelligent Things, Plataforma de Interação",
+            contributions: "O que temos que ter sempre em mente é que a alta necessidade de integridade otimiza o uso dos processadores dos requisitos mínimos de hardware exigidos. Pensando mais a longo prazo, o desenvolvimento contínuo de distintas formas de codificação conduz a um melhor balancemanto de carga da garantia da disponibilidade. A implantação, na prática, prova que a consolidação das infraestruturas apresenta tendências no sentido de aprovar a nova topologia das ferramentas OpenSource.",
+            hardSkills: "Python, CSS, Html",
+            softSkills: "Autonomia, Proatividade",
+            repoLink: "[https://github.com/gabrielbguimaraes/Smart-Farming-API-1%C2%BA-Semestre](https://github.com/gabrielbguimaraes/Smart-Farming-API-1%C2%BA-Semestre)"
+        },
+        "automatizacao-backups": {
+            title: "Automatização de Backups",
+            year: "2023",
+            partner: "DEEPESG",
+            description: "Realizei a automatização de backups de empresa criando um script que acessava a API da Oracle Cloud infrastructure e enviava toda semana um email informando se a verificação foi realizada e quais empresas foram verificadas.",
+            technologies: "Python, Oracle Cloud Infrastructure (OCI) API, E-mail Automation",
+            contributions: "Desenvolvimento e implementação do script Python, configuração de agendamento, testes e monitoramento.",
+            hardSkills: "Python, APIs REST, Automação",
+            softSkills: "Resolução de Problemas, Atenção a Detalhes",
+            repoLink: "[https://github.com/gabrielbguimaraes/Automacao-Deep](https://github.com/gabrielbguimaraes/Automacao-Deep)"
+        },
+        "one-piece-dev": {
+            title: "Projeto Dev Web (One Piece)",
+            year: "2024",
+            partner: "FATEC",
+            description: "Criei um site de tema livre com o tema de uma página para os fãs de One Piece e criei um banco de dados para o cadastro de usuários e a conteinerização da aplicação utilizando Docker e Docker Compose, garantindo um ambiente de desenvolvimento e deploy robusto e portátil.",
+            technologies: "HTML, CSS, JavaScript, Docker, Docker Compose, MySQL",
+            contributions: "Design e desenvolvimento front-end e back-end, modelagem do banco de dados, conteinerização da aplicação.",
+            hardSkills: "Web Development, Docker, Bancos de Dados",
+            softSkills: "Criatividade, Gerenciamento de Projeto Básico",
+            repoLink: "[https://github.com/gabrielbguimaraes/docker-web-app](https://github.com/gabrielbguimaraes/docker-web-app)"
+        },
+        "inv-sort": {
+            title: "Inv. Sort",
+            year: "2024-1",
+            partner: "FATEC",
+            description: "Participei de um projeto chamado Inv.Sort, uma solução moderna para gerenciamento de inventários. Utilizando Node.js, React e AWS, o sistema automatiza o controle de estoque com interface intuitiva, permitindo rastreamento eficiente e geração de relatórios. O projeto foi desenvolvido utilizando a metodologia ágil Scrum para otimização do processo de desenvolvimento.",
+            technologies: "Node.js, React, AWS (S3, Lambda, API Gateway), Scrum",
+            contributions: "Desenvolvimento de módulos de back-end (Node.js), integração com APIs AWS, participação em reuniões Scrum e planejamento de sprints.",
+            hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
+            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
+            repoLink: "[https://github.com/gabrielbguimaraes/Inv.Sort-API-2%C2%BA-Semestre](https://github.com/gabrielbguimaraes/Inv.Sort-API-2%C2%BA-Semestre)"
+        }
+    };
+
+    // --- Elementos do Modal ---
+    const projectModal = document.getElementById('projectModal');
+    const closeButton = projectModal.querySelector('.close-button');
+    const modalCloseButton = projectModal.querySelector('.modal-close-button');
+    const viewProjectButtons = document.querySelectorAll('.view-project-button');
+
+    const modalTitle = projectModal.querySelector('.modal-title');
+    const modalYear = projectModal.querySelector('.modal-year');
+    const modalPartner = projectModal.querySelector('.modal-partner');
+    const modalDescription = projectModal.querySelector('.modal-description');
+    const modalTechList = projectModal.querySelector('.modal-tech-list');
+    const modalContributions = projectModal.querySelector('.modal-contributions');
+    const modalHardSkills = projectModal.querySelector('.modal-hard-skills');
+    const modalSoftSkills = projectModal.querySelector('.modal-soft-skills');
+    const modalRepoButton = projectModal.querySelector('.modal-repo-button');
+
 
     // --- Funções Comuns ---
 
@@ -51,8 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Rola para a seção ativa no container #portfolio-sections
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+        // --- ATUALIZAR CLASSE ATIVA DA NAV BAR ---
+        document.querySelectorAll('.nav-link-internal').forEach(link => {
+            if (link.dataset.section === sectionId) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+        // --- FIM DA ATUALIZAÇÃO ---
+
         // Inicia ou reseta a animação da logo (apenas o texto padrão "Seja bem-vindo!")
-        if (!isLogoHovered) { // Se não estiver em hover, mostra o texto padrão
+        // Garante que a animação da logo padrão só rode se não estiver em hover
+        if (!isLogoHovered) {
             currentLogoText = welcomeText;
             startLogoTextAnimation();
         }
@@ -74,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 initialTerminalScreen.classList.add('fade-out');
                 initialTerminalScreen.addEventListener('transitionend', () => {
                     initialTerminalScreen.style.display = 'none';
-                    showSection('home'); // Isso também vai acionar startLogoTextAnimation com welcomeText
+                    showSection('home');
                 }, { once: true });
             }, fadeOutDelay);
         }
@@ -82,14 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animação de texto da logo (agora usa 'currentLogoText')
     function animateLogoText() {
+        let cursorAnimationName = (currentLogoText === welcomeText) ? 'blink-caret-logo' : 'blink-caret-name';
+
         if (logoCharIndex < currentLogoText.length) {
             logoAnimationTextElement.textContent += currentLogoText.charAt(logoCharIndex);
-            logoAnimationTextElement.classList.remove('typed'); // Garante que o cursor pisque
+            // Aplica a animação do cursor, removendo a anterior para evitar conflitos
+            logoAnimationTextElement.style.animation = `${cursorAnimationName} 0.75s step-end infinite`;
             logoAnimationTimeout = setTimeout(animateLogoText, logoTypingSpeed);
             logoCharIndex++;
         } else {
-            logoAnimationTextElement.classList.add('typed'); // Remove cursor ao finalizar digitação
-            // Reinicia a animação após um tempo se for o texto padrão
+            logoAnimationTextElement.classList.add('typed');
+            logoAnimationTextElement.style.animation = 'none'; // Para o cursor piscar no final da digitação
+            // Reinicia a animação após um tempo se for o texto padrão e não estiver em hover
             if (currentLogoText === welcomeText && !isLogoHovered) {
                 setTimeout(() => {
                     logoAnimationTextElement.textContent = '';
@@ -103,14 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startLogoTextAnimation() {
         if (logoAnimationTextElement) {
-            clearTimeout(logoAnimationTimeout); // Limpa qualquer animação anterior
-            logoAnimationTextElement.textContent = ''; // Limpa o texto
-            logoCharIndex = 0; // Reseta o índice
+            clearTimeout(logoAnimationTimeout);
+            logoAnimationTextElement.textContent = '';
+            logoCharIndex = 0;
             logoAnimationTextElement.classList.remove('typed');
-            // Remove a classe name-visible se estiver ativa (para o texto padrão)
             logoAnimationTextElement.classList.remove('name-visible');
-            logoAnimationTextElement.classList.add('visible'); // Mostra o elemento
-            animateLogoText(); // Inicia a digitação
+            logoAnimationTextElement.classList.add('visible');
+            logoAnimationTextElement.style.animation = `blink-caret-logo 0.75s step-end infinite`; // Inicia com cursor padrão
+            animateLogoText();
         }
     }
 
@@ -121,7 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
             logoAnimationTextElement.textContent = '';
             logoCharIndex = 0;
             logoAnimationTextElement.classList.remove('typed');
-            logoAnimationTextElement.classList.remove('name-visible'); // Garante que a classe name-visible seja removida
+            logoAnimationTextElement.classList.remove('name-visible');
+            logoAnimationTextElement.style.animation = 'none'; // Garante que a animação do cursor pare
         }
     }
 
@@ -135,7 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
             logoAnimationTextElement.classList.remove('typed');
             logoAnimationTextElement.classList.add('visible');
             logoAnimationTextElement.classList.add('name-visible'); // Adiciona classe para estilo do nome
-            currentLogoText = nameText; // Define o texto para o nome
+            currentLogoText = nameText;
+            logoAnimationTextElement.style.animation = `blink-caret-name 0.75s step-end infinite`; // Aplica animação de cursor do nome
             animateLogoText();
         });
 
@@ -145,16 +227,16 @@ document.addEventListener('DOMContentLoaded', () => {
             logoAnimationTextElement.textContent = '';
             logoCharIndex = 0;
             logoAnimationTextElement.classList.remove('typed');
-            logoAnimationTextElement.classList.remove('name-visible'); // Remove a classe de estilo do nome
-            logoAnimationTextElement.classList.remove('visible'); // Esconde ao sair
+            logoAnimationTextElement.classList.remove('name-visible');
+            logoAnimationTextElement.classList.remove('visible');
+            logoAnimationTextElement.style.animation = 'none'; // Para o cursor ao sair
 
-            // Após um pequeno delay, reinicia a animação padrão se não estiver em hover novamente
             setTimeout(() => {
-                if (!isLogoHovered) {
+                if (!isLogoHovered) { // Verifica novamente se o mouse não está mais sobre a logo
                     currentLogoText = welcomeText;
-                    startLogoTextAnimation();
+                    startLogoTextAnimation(); // Reinicia a animação padrão
                 }
-            }, 500); // Meio segundo de delay para reiniciar
+            }, 500);
         });
     }
 
@@ -195,34 +277,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const itemsPerView = () => {
         if (window.innerWidth <= 576) return 1;
-        if (window.innerWidth <= 767) return 2; // Duas colunas em mobile grande/tablet pequeno
-        if (window.innerWidth <= 1024) return 3; // Três colunas em laptops
-        return 4; // Quatro colunas em desktop
+        if (window.innerWidth <= 767) return 2;
+        if (window.innerWidth <= 1024) return 3;
+        return 4;
     };
 
     function updateCarousel() {
         if (!techCarouselInner) return;
 
-        // Calcular total de itens visíveis com base na largura atual
+        const totalItems = techCarouselInner.children.length;
         const currentItemsPerView = itemsPerView();
-        const totalItems = techCarouselInner.children.length; // Número total de itens no carrossel
-
-        // MaxIndex é o último índice de slide possível
-        // Ex: 21 itens, 4 por vez -> (21 / 4) = 5.25 -> ceil = 6. 6-1 = 5. (Índices 0 a 5)
-        // Isso permite que o último slide mostre menos itens se não completar a linha.
         const maxIndex = Math.max(0, Math.ceil(totalItems / currentItemsPerView) - 1);
 
-        // Ajustar currentIndex se ele for além do limite (acontece ao redimensionar)
-        if (currentIndex > maxIndex) {
-            currentIndex = maxIndex;
-        }
         if (currentIndex < 0) {
-            currentIndex = 0; // Não permitir ir abaixo de 0
+            currentIndex = maxIndex;
+        } else if (currentIndex > maxIndex) {
+            currentIndex = 0;
         }
 
         const offset = -currentIndex * (100 / currentItemsPerView);
         techCarouselInner.style.transform = `translateX(${offset}%)`;
-        console.log(`Carousel: currentIdx=${currentIndex}, totalItems=${totalItems}, itemsPerView=${currentItemsPerView}, maxIdx=${maxIndex}, offset=${offset}%`); // Debugging
+
+        console.log(`Carousel Debug: currentIdx=${currentIndex}, totalItems=${totalItems}, itemsPerView=${currentItemsPerView}, maxIdx=${maxIndex}, offset=${offset}%`);
     }
 
     if (prevButton && nextButton && techCarouselInner) {
@@ -236,15 +312,65 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
         });
 
-        // Ouve o redimensionamento da janela para recalcular e atualizar
         window.addEventListener('resize', () => {
-            // Não resetamos o currentIndex aqui para a UX, mas ajustamos ele dentro de updateCarousel
             updateCarousel();
         });
 
-        // Inicializa o carrossel
         updateCarousel();
     }
+
+    // --- Lógica do Modal ---
+    function openModal(projectId) {
+        const project = projectDetails[projectId];
+        if (!project) {
+            console.error("Detalhes do projeto não encontrados para o ID:", projectId);
+            return;
+        }
+
+        modalTitle.textContent = project.title;
+        modalYear.textContent = project.year || 'N/A';
+        modalPartner.textContent = project.partner || 'N/A';
+        modalDescription.textContent = project.description || 'Nenhuma descrição disponível.';
+        modalTechList.textContent = project.technologies || 'N/A';
+        modalContributions.textContent = project.contributions || 'Nenhuma contribuição listada.';
+        modalHardSkills.textContent = project.hardSkills || 'N/A';
+        modalSoftSkills.textContent = project.softSkills || 'N/A';
+
+        if (project.repoLink) {
+            modalRepoButton.href = project.repoLink;
+            modalRepoButton.style.display = 'inline-block';
+        } else {
+            modalRepoButton.style.display = 'none';
+        }
+
+        projectModal.classList.add('active');
+        // Desativar rolagem do container principal enquanto o modal estiver aberto
+        portfolioSectionsContainer.style.overflowY = 'hidden';
+    }
+
+    function closeModal() {
+        projectModal.classList.remove('active');
+        // Reativar rolagem do container principal
+        portfolioSectionsContainer.style.overflowY = 'scroll';
+    }
+
+    // Event Listeners para os botões do modal
+    viewProjectButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const projectId = e.target.dataset.project;
+            openModal(projectId);
+        });
+    });
+
+    closeButton.addEventListener('click', closeModal);
+    modalCloseButton.addEventListener('click', closeModal);
+
+    // Fechar modal ao clicar fora (no overlay)
+    projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+            closeModal();
+        }
+    });
 
 
     // --- Inicialização ---
