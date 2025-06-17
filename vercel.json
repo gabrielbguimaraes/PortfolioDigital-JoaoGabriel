@@ -1,5 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "public/templates/index.html" }
-  ]
-}
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/(.*)",
+        "dest": "/templates/$1"
+      }
+    ]
+  }
+  
