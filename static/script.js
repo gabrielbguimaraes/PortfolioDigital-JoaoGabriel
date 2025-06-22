@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contributions: "Desenvolvedor: Atuei na criação da iteração do calendário anual para integração com o efeito carrossel da aplicação, assim como o detalhamento dos dados ao clicar no dia. Também atuei no desenvolvimento do sistema de filtro por dias na seção de analytics da aplicação.",
             hardSkills: "HTML5, CSS3, JavaScript, VS Code, GitHub, Flask, MySQL, Figma, Jira",
             softSkills: "Durante o desenvolvimento, tivemos como obstáculo a adaptação do processo de desenvolvimento ágil no desenvolvimento de software e principalmente na arquitetura necessária, como DoR e DoD das tarefas que não estavam bem definidas, e para contornar desenvolvemos a proatividade do grupo em visualizar a nossa dificuldade em reuniões e reestruturar nosso projeto com a ajuda e orientação dos professores.",
-            repoLink: "[https://github.com/BugBustersFatecSJC/Smart-farm](https://github.com/BugBustersFatecSJC/Smart-farm)"
+            repoLink: "https://github.com/BugBustersFatecSJC/Smart-farm"
         },
         "automatizacao-backups": {
             title: "Automatização de Backups",
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contributions: "Design e desenvolvimento front-end e back-end, modelagem do banco de dados, conteinerização da aplicação.",
             hardSkills: "Web Development, Docker, Bancos de Dados",
             softSkills: "Criatividade, Gerenciamento de Projeto Básico",
-            repoLink: "[https://github.com/gabrielbguimaraes/dev_web_JGBG](https://github.com/gabrielbguimaraes/dev_web_JGBG)"
+            repoLink: "https://github.com/gabrielbguimaraes/dev_web_JGBG"
         },
         "inv-sort": {
             title: "Inv. Sort",
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contributions: "Desenvolvimento de módulos de back-end (Node.js), integração com APIs AWS, participação em reuniões Scrum e planejamento de sprints.",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
             softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
-            repoLink: "[https://github.com/BugBustersFatecSJC/inv.sort](https://github.com/BugBustersFatecSJC/inv.sort)"
+            repoLink: "https://github.com/BugBustersFatecSJC/inv.sort"
         },
         "checkpoint": {
             title: "checkpoint",
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contributions: "Scrum Master: Atuei na qualidade do processo de desenvolvimento, assegurando que não hajam obstáculos para a equipe de desenvolvimento e para o Product Owner",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
             softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
-            repoLink: "[https://github.com/FR0M-ZER0/checkpoint](https://github.com/FR0M-ZER0/checkpoint)"
+            repoLink: "https://github.com/FR0M-ZER0/checkpoint"
         },
         "offboarding": {
             title: "offboarding",
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contributions: "Scrum Master: Atuei na qualidade do processo de desenvolvimento, assegurando que não hajam obstáculos para a equipe de desenvolvimento e para o Product Owner",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
             softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
-            repoLink: "[https://github.com/FR0M-ZER0/checkpoint](https://github.com/FR0M-ZER0/checkpoint)"
+            repoLink: "https://github.com/FR0M-ZER0/checkpoint"
         }
     };
 
