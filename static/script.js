@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let logoCharIndex = 0;
     const logoTypingSpeed = 80;
     let logoAnimationTimeout;
-    let isLogoHovered = false; // Estado do hover da logo
-
-    // --- Dados dos Projetos para o Modal (EXEMPLOS - PREENCHA COM SEUS DADOS REAIS) ---
+    let isLogoHovered = false; 
     const projectDetails = {
         "smart-farming": {
             title: "Smart Farming",
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "Python, AWS, boto3, Cloud Function, Cloud Scheduler, Github Actions, Google Cloud, Mailjet, Google Chat Webhook, GcpJwtSigner",
             contributions: "Desenvolvedor: Criei o programa utilizando o conjunto de tecnologias seguindo a orientação do meu time de infraestrutura para o uso das tecnologias e otimização do processo.",
             hardSkills: "Python, APIs REST, Automação",
-            softSkills: "Resolução de Problemas, Atenção a Detalhes"
+            softSkills: "Colaboração: Como o processo de verificação de backups era manual e custoso, fez-se necessidade a validação automática semanal desses backups, sendo assim, a consolidação desse programa diminui todo o custo para o time de infra, levando em conta que o processo manual era demorado. Entrega: Todo os requisitos para a atividade foram realizados e validados diretamente com o Head de Infraestrutura da DEEPESG"
         },
         "one-piece-dev": {
             title: "Projeto Dev Web (One Piece)",
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "HTML, CSS, JavaScript, Docker, Docker Compose, MySQL",
             contributions: "Design e desenvolvimento front-end e back-end, modelagem do banco de dados, conteinerização da aplicação.",
             hardSkills: "Web Development, Docker, Bancos de Dados",
-            softSkills: "Criatividade, Gerenciamento de Projeto Básico",
+            softSkills: "Entrega: Entrega atendendo TODOS os requisitos, na qual era necessário um deploy de imagem no Docker de uma aplicação web rodando em conjunto com uma imagem MYSQL utilizando o serviço do Docker Compose ",
             repoLink: "https://github.com/gabrielbguimaraes/dev_web_JGBG"
         },
         "inv-sort": {
@@ -61,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "2024-1",
             partner: "FATEC",
             description: "Participei de um projeto chamado Inv.Sort, uma solução moderna para gerenciamento de inventários. Utilizando Node.js, React e AWS, o sistema automatiza o controle de estoque com interface intuitiva, permitindo rastreamento eficiente e geração de relatórios. O projeto foi desenvolvido utilizando a metodologia ágil Scrum para otimização do processo de desenvolvimento.",
-            technologies: "Node.js, React, AWS (S3, Lambda, API Gateway), Scrum",
+            technologies: "Node.js, React, AWS (RDS, EC2)",
             contributions: "Desenvolvimento de módulos de back-end (Node.js), integração com APIs AWS, participação em reuniões Scrum e planejamento de sprints.",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
-            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
+            softSkills: "Proatividade: Tivemos como desafio a documentação e estruturação inicial do projeto comprometendo todo o processo de desenvolvimento, em resolução, organizamos reuniões fora do horário para a identificação e resolução desse problema. ",
             repoLink: "https://github.com/BugBustersFatecSJC/inv.sort"
         },
         "checkpoint": {
@@ -75,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "Java, Spring Boot, React, TypeScript, MySQL, MongoDB, AWS, Tailwind, CSS, STOMP, SockJS, Axios, React",
             contributions: "Scrum Master: Atuei na qualidade do processo de desenvolvimento, assegurando que não hajam obstáculos para a equipe de desenvolvimento e para o Product Owner",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
-            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
+            softSkills: "Colaboração: Tivemos dificuldades com as atribuições de funções no projeto, o que resultou no atraso da estruturação e em certa desorganização do nosso projeto, como solução, identificamos o porquê da falha de estruturação e revisamos as funções do time. Proatividade: Em virtude da falta de validação do documento de requisitos com o cliente, agimos de maneira ágil em uma reunião para, assim, alinharmos todos os requisitos com o cliente na mesma semana, assegurando a necessidade do cliente para nosso produto" ,
             repoLink: "https://github.com/FR0M-ZER0/checkpoint"
         },
         "offboarding": {
@@ -86,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "AppsScript, Jira API, Github Actions, Github API",
             contributions: "Scrum Master: Atuei na qualidade do processo de desenvolvimento, assegurando que não hajam obstáculos para a equipe de desenvolvimento e para o Product Owner",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
-            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade"
+            softSkills: "Autonomia: O projeto começou pequeno e surgiu na necessidade manual e suscetivel à falhas humanas no processo de suspensão de usuários no domínio da deep, dito isto, a ideia foi incremental em função do tempo, estando diretamente em validação do processo com o Head de Infraestrutura da DEEP."
         }
     };
 
