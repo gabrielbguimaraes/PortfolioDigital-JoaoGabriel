@@ -86,8 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "AppsScript, Jira API, Github Actions, Github API",
             contributions: "Scrum Master: Atuei na qualidade do processo de desenvolvimento, assegurando que não hajam obstáculos para a equipe de desenvolvimento e para o Product Owner",
             hardSkills: "Full-stack Development, Cloud Computing, Metodologias Ágeis",
-            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade",
-            repoLink: "https://github.com/FR0M-ZER0/checkpoint"
+            softSkills: "Trabalho em Equipe, Comunicação, Adaptabilidade"
         }
     };
 
